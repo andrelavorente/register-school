@@ -1,29 +1,27 @@
-import "./formfuncionario.css";
+import "./CadastroFuncionario.css";
 
 function FormFuncionario() {
   return (
-    <form  className="alinhamento">
+    <form className="alinhamento">
       <div class="card">
         <h5 class="card-header">DADOS FUNCIONÁRIO</h5>
         <div class="card-body ">
-
-            <div className="row">
-                      <div className="col-2">
-                          <span>CÓD. FUNCIONÁRIO</span>
-                          <div class="input-group flex-nowrap">
-                            <input
-                              type="email"
-                              class="form-control"
-                              placeholder=""
-                              aria-label="Username"
-                              aria-describedby="addon-wrapping"
-                            /> 
-                            &nbsp; &nbsp; 
-                          <i class="bi bi-search my-custom-icon"></i>
-                          </div>
-                
-                        </div>
-              </div>         
+          <div className="row">
+            <div className="col-2">
+              <span>CÓD. FUNCIONÁRIO</span>
+              <div class="input-group flex-nowrap">
+                <input
+                  type="email"
+                  class="form-control"
+                  placeholder=""
+                  aria-label="Username"
+                  aria-describedby="addon-wrapping"
+                />
+                &nbsp; &nbsp;
+                <i class="bi bi-search my-custom-icon"></i>
+              </div>
+            </div>
+          </div>
           <div className="row">
             <div className="col">
               <span>NOME</span>
@@ -135,33 +133,27 @@ function FormFuncionario() {
             </div>
           </div>
 
-            <div className="row">
-            &nbsp;
-            </div>
-
+          <div className="row">&nbsp;</div>
 
           <div className="card">
-          <h5 class="card-header">DEPARTAMENTO</h5>
+            <h5 class="card-header">DEPARTAMENTO</h5>
             <div className="card-body">
-
               <div className="row">
-                  <div className="col-2">
-                      <span>CÓD. SETOR</span>
-                      <div class="input-group flex-nowrap">
-                        <input
-                          type="email"
-                          class="form-control"
-                          placeholder=""
-                          aria-label="Username"
-                          aria-describedby="addon-wrapping"
-                        />
-                          &nbsp; &nbsp; 
-                          <i class="bi bi-search my-custom-icon"></i>
-                      </div>
-                      
-                    </div>
+                <div className="col-2">
+                  <span>CÓD. SETOR</span>
+                  <div class="input-group flex-nowrap">
+                    <input
+                      type="email"
+                      class="form-control"
+                      placeholder=""
+                      aria-label="Username"
+                      aria-describedby="addon-wrapping"
+                    />
+                    &nbsp; &nbsp;
+                    <i class="bi bi-search my-custom-icon"></i>
+                  </div>
+                </div>
               </div>
-
 
               <div className="row">
                 <div className="col-6">
@@ -193,22 +185,25 @@ function FormFuncionario() {
           </div>
         </div>
 
-
-      <div className="row aling-itens-botoes">
+        <div className="row aling-itens-botoes">
           <div className="col-3">
-               <button type="button" class="btn btn-success"><i class="bi bi-bag-plus"></i> &nbsp; CADASTRAR</button>
+            <button type="button" class="btn btn-success">
+              <i class="bi bi-bag-plus"></i> &nbsp; CADASTRAR
+            </button>
           </div>
           <div className="col-3">
-                 <button type="button" class="btn btn-info"> <i class="bi bi-pencil"></i>&nbsp; EDITAR</button>
+            <button type="button" class="btn btn-info">
+              {" "}
+              <i class="bi bi-pencil"></i>&nbsp; EDITAR
+            </button>
           </div>
           <div className="col-3">
-                <button type="button" class="btn btn-danger"> <i class="bi bi-trash"></i>&nbsp; EXCLUIR</button>
+            <button type="button" class="btn btn-danger">
+              {" "}
+              <i class="bi bi-trash"></i>&nbsp; EXCLUIR
+            </button>
           </div>
-      </div>
-        
-
-
-
+        </div>
       </div>
     </form>
   );
