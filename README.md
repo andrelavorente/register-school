@@ -1,4 +1,4 @@
-Sistema de Gestão Escolar em React
+
 Este é um sistema de gestão escolar desenvolvido em React, que visa facilitar a administração e organização de atividades em uma instituição educacional. Esta aplicação web permite o gerenciamento de alunos, professores, disciplinas, notas e outras funcionalidades relevantes para a gestão escolar.
 
 Funcionalidades Principais
@@ -23,8 +23,6 @@ Navegue até o diretório do projeto: cd sistema-gestao-escolar
 Instale as dependências: npm install
 Inicie a aplicação: npm start
 Acesse a aplicação em seu navegador: http://localhost:3000
-Contribuição
-Contribuições são bem-vindas! Se você deseja contribuir com melhorias, novas funcionalidades ou correções de bugs, siga estas etapas:
 
 
 Autores
