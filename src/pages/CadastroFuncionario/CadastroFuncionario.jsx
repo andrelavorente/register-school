@@ -3,6 +3,7 @@ import "./CadastroFuncionario.css";
 function validarObrigatoriedadeDosCampos(){
     
   let erros = "";
+  var radios = document.getElementsByName('sexo');
 
    if(document.getElementById("nome").value === ""){
       erros += "O NOME DO FUNCIONÁRIO É OBRIGATÓRIO \n";
@@ -13,9 +14,11 @@ function validarObrigatoriedadeDosCampos(){
    }
    
    if(document.getElementById("cpf").value === ""){
-    erros += "O CPF DO FUNCIONÁRIO É OBRIGATÓRIO \n";
+        erros += "O CPF DO FUNCIONÁRIO É OBRIGATÓRIO \n";
    }
-  
+   if(!validarCPF()){
+    erros += "O CPF DO FUNCIONÁRIO NÃO É VÁLIDO \n";
+   }
    if(document.getElementById("data_nasc").value === ""){
     erros += "A DATA DE NASCIMENTO DO FUNCIONÁRIO É OBRIGATÓRIO \n";
    }
@@ -37,10 +40,72 @@ function validarObrigatoriedadeDosCampos(){
     erros += "A DATA DE ADMISSÃO É OBRIGATÓRIO \n";
    }
 
+   /** Validação de radiobox */
+   var selecionado = false;
+   for (var i = 0; i < radios.length; i++) {
+       if (radios[i].checked) {
+           selecionado = true;
+           break;
+       }
+   }
+
+   if(!selecionado){
+    erros += "O SEXO É OBRIGATÓRIO \n";
+   }
+
+
    if(erros.length > 0){
      alert(erros);
    }
+   else{
+      alert("NOVO FUNCIONÁRIO REGISTRADO COM SUCESSO!!!")
+   }
 }
+
+function validarCPF() {
+  // Obter o valor do campo de CPF
+  var cpf = document.getElementById('cpf').value;
+
+  // Remover caracteres não numéricos
+  cpf = cpf.replace(/\D/g, '');
+
+  // Verificar se o CPF tem 11 dígitos
+  if (cpf.length !== 11) {
+      alert('CPF inválido. O CPF deve ter 11 dígitos.');
+      return;
+  }
+
+  // Verificar se todos os dígitos são iguais
+  if (/^(\d)\1+$/.test(cpf)) {
+      alert('CPF inválido. Todos os dígitos são iguais.');
+      return;
+  }
+  var i=0;
+  // Calcular os dígitos verificadores
+  var soma = 0;
+  for ( i = 0; i < 9; i++) {
+      soma += parseInt(cpf.charAt(i)) * (10 - i);
+  }
+  var resto = soma % 11;
+  var digito1 = resto < 2 ? 0 : 11 - resto;
+
+  soma = 0;
+  for ( i = 0; i < 10; i++) {
+      soma += parseInt(cpf.charAt(i)) * (11 - i);
+  }
+  resto = soma % 11;
+  var digito2 = resto < 2 ? 0 : 11 - resto;
+
+  // Verificar se os dígitos verificadores estão corretos
+  if (parseInt(cpf.charAt(9)) !== digito1 || parseInt(cpf.charAt(10)) !== digito2) {
+      alert('CPF inválido. Dígitos verificadores não conferem.');
+      return;
+  }
+
+  // Se chegou até aqui, o CPF é válido
+  return true;
+}
+
 
 function FormFuncionario() {
   return (
@@ -84,7 +149,7 @@ function FormFuncionario() {
               <div class="input-group flex-nowrap">
                 <input
                   name="rg"
-                  id="rg"
+                  id="rg" 
                   type="text"
                   class="form-control"
                   placeholder=""
@@ -170,6 +235,47 @@ function FormFuncionario() {
             </div>
           </div>
           <div className="row">
+          <div className="col-6">
+              <span>CIDADE <b>*</b></span>
+              <div class="input-group flex-nowrap">
+                <input
+                  name="rua"
+                  id="rua"
+                  type="text"
+                  class="form-control"
+                  placeholder=""
+                  required
+                />
+              </div>
+            </div>
+            <div className="col-3">
+              <span>ESTADO <b>*</b></span>
+              <div class="input-group flex-nowrap">
+                <input
+                  name="numero"
+                  id="numero"
+                  type="text"
+                  class="form-control"
+                  placeholder=""
+                  required
+                />
+              </div>
+            </div>
+            <div className="col-3">
+              <span>CEP</span>
+              <div class="input-group flex-nowrap">
+                <input
+                  name="cep"
+                  id="cep"
+                  type="number"
+                  class="form-control"
+                  placeholder="99999-000"
+                  required
+                />
+              </div>
+            </div>
+          </div>
+          <div className="row">
             <div className="col-9">
               <span>E-MAIL <b>*</b></span>
               <div class="input-group flex-nowrap">
@@ -189,7 +295,7 @@ function FormFuncionario() {
                 <input
                   name="telefone"
                   id="telefone"
-                  type="email"
+                  type="number"
                   class="form-control"
                   placeholder="(99) 99999-9999"
                   required
@@ -255,12 +361,12 @@ function FormFuncionario() {
             </button>
           </div>
           <div className="col-3">
-            <button type="button" class="btn btn-info cor_botao">
+            <button type="button" class="btn btn-info cor_botao" onClick={(e) => validarObrigatoriedadeDosCampos()}>
               <i class="bi bi-pencil"></i>&nbsp; ATUALIZAR
             </button>
           </div>
           <div className="col-3">
-            <button type="button" class="btn btn-danger">
+            <button type="button" class="btn btn-danger" onClick={(e) => validarObrigatoriedadeDosCampos()}>
               <i class="bi bi-trash"></i>&nbsp; EXCLUIR
             </button>
           </div>

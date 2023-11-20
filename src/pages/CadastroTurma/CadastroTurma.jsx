@@ -124,9 +124,9 @@ function CadastroTurma() {
             </button>
           </div>
           <div className="col-3">
-            <button type="button" class="btn btn-info">
+            <button type="button" class="btn btn-info cor_botao">
               {" "}
-              <i class="bi bi-pencil"></i>&nbsp; EDITAR
+              <i class="bi bi-pencil"></i>&nbsp; ATUALIZAR
             </button>
           </div>
           <div className="col-3">
