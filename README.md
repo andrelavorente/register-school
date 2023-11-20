@@ -26,6 +26,7 @@ Acesse a aplicação em seu navegador: http://localhost:3000
 
 
 Autores
+
 André Luiz Peres Lavorente Augusto
 Blumer Vinicius Pachu Silva
 Bruno Junior Rufino
