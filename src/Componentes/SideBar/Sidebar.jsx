@@ -1,4 +1,5 @@
 import "./sidebar.css";
+import Brasao from "../Brasao/Brasao.jsx";
 
 function Sidebar() {
   return (
@@ -8,7 +9,11 @@ function Sidebar() {
           href="/"
           class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none"
         >
-          <span class="fs-4">Ranazzi</span>
+
+     
+          <Brasao></Brasao>
+        
+        
         </a>
         <hr></hr>
         <ul class="nav nav-pills flex-column mb-auto">

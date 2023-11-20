@@ -4,7 +4,7 @@ function CadastroTurma() {
   return (
     <form className="alinhamento">
       <div class="card">
-        <h5 class="card-header">DADOS TURMA</h5>
+        <h5 class="card-header">GERENCIAR TURMA</h5>
         <div class="card-body ">
           <div className="row">
             <div className="col-2">
@@ -135,6 +135,9 @@ function CadastroTurma() {
               <i class="bi bi-trash"></i>&nbsp; EXCLUIR
             </button>
           </div>
+        </div>
+        <div className="row"> 
+              &nbsp;
         </div>
       </div>
     </form>
