@@ -1,0 +1,51 @@
+form {
+  text-align: left;
+}
+
+h3,
+h5 {
+  text-align: center;
+}
+
+.alinhamento {
+  padding-left: 300px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+}
+
+.obs {
+  width: 50%;
+  margin: 0 auto;
+  padding-right: 150px;
+
+  text-align: center;
+}
+
+#observacao {
+  width: 50%;
+  margin: 0 auto;
+  padding-left: 100px;
+  text-align: center;
+}
+
+#periodo {
+  padding: 7px;
+  width: 100%;
+  border-radius: 7px;
+  border: 1px solid rgba(128, 128, 128, 0.452);
+}
+
+.centraliza {
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.erro {
+  border: 1px solid red;
+}

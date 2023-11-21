@@ -9,16 +9,12 @@ function Sidebar() {
           href="/"
           class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none"
         >
-
-     
           <Brasao></Brasao>
-        
-        
         </a>
         <hr></hr>
         <ul class="nav nav-pills flex-column mb-auto">
           <li class="nav-item">
-            <a href="/home" class="nav-link active" aria-current="page">
+            <a href="/" class="nav-link active" aria-current="page">
               {" "}
               <i class="bi bi-house-door-fill"></i> HOME
             </a>
