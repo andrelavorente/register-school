@@ -32,11 +32,23 @@ Acesse a aplicação em seu navegador: http://localhost:3000
 
 André Luiz Peres Lavorente Augusto - RA: 10482222760
 
+![image](https://github.com/andrelavorente/register-school/assets/118311224/761f89ec-da5e-4d14-afc0-d18b532f348a)
+
+
 Blumer Vinicius Pachu Silva - RA: 10482223786
+
+![image](https://github.com/andrelavorente/register-school/assets/118311224/7666d8d7-60a8-4a4f-983b-67b108d9e5e1)
+
 
 Bruno Junior Rufino - RA: 10482223178
 
+![image](https://github.com/andrelavorente/register-school/assets/118311224/19ce03bd-908b-48c2-abc7-84fd3e05fafc)
+
+
 Paulo Vitor Santos da Silva - RA: 10482223392
+
+![image](https://github.com/andrelavorente/register-school/assets/118311224/61f7d513-7f3a-41ea-8982-6114b332187e)
+
 
 <h2>Licença</h2>
 
